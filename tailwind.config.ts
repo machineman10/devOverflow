@@ -20,6 +20,7 @@ const config: Config = {
         primary: {
           500: "#FF7000",
           100: "#E2995F",
+          800: "#FFF1E6",
         },
         dark: {
           100: "#000000",

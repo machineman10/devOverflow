@@ -10,11 +10,11 @@ const dummyQ = [
   { title: "How can an airconditioning machine exist?" },
 ];
 const dummyT = [
-  { tag: "Nextjs", count: 5 },
-  { tag: "Nextjs", count: 5 },
-  { tag: "Nextjs", count: 5 },
-  { tag: "Nextjs", count: 5 },
-  { tag: "Nextjs", count: 5 },
+  { tag: "Nextjs", count: 5, _id: "1" },
+  { tag: "Nextjs", count: 5, _id: "2" },
+  { tag: "Nextjs", count: 5, _id: "3" },
+  { tag: "Nextjs", count: 5, _id: "4" },
+  { tag: "Nextjs", count: 5, _id: "5" },
 ];
 const RightSidebar = () => {
   return (
@@ -44,7 +44,13 @@ const RightSidebar = () => {
         <h3 className="h3-bold text-dark200_light900">Popular Tags</h3>
         <div className="mt-7 flex flex-col gap-4">
           {dummyT.map((item, i) => (
-            <RenderTag key={i} tag={item.tag} count={item.count} showCount />
+            <RenderTag
+              key={item._id}
+              _id={item._id}
+              tag={item.tag}
+              count={item.count}
+              showCount
+            />
           ))}
         </div>
       </div>
